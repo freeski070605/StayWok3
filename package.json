@@ -21,7 +21,7 @@
     "server": "nodemon server.js",
     "client": "cd staywok3-football-league && npm start",
     "build": "cd staywok3-football-league && npm run build",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd staywok3-football-league && npm install && npm run build"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
