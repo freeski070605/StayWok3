@@ -18,11 +18,11 @@
   },
   "scripts": {
     "start": "cd football-league-backend && node server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run start\"",
     "server": "nodemon server.js",
     "client": "cd staywok3-football-league && npm start",
-    "build": "cd staywok3-football-league && npm run build",
-    "heroku-postbuild": "cd staywok3-football-league && npm install && npm run build"
+    "build": "cd staywok3-football-league && npm run start",
+    "heroku-postbuild": "cd staywok3-football-league && npm install && npm run start"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
