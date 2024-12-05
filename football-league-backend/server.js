@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const dotenv = require('dotenv');
 const cors = require('cors');
 const User = require('./models/User');
 const Team = require('./models/Team');
@@ -16,7 +15,7 @@ const gameRoutes = require('./routes/gameRoutes');
 const standingsRoutes = require('./routes/standingsRoutes');
 const statsRoutes = require('./routes/stats');
 
-dotenv.config();
+require('dotenv').config(); 
 const app = express();
 
 // Middleware
