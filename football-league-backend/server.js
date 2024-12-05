@@ -28,10 +28,21 @@ mongoose
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error(err));
 
+// Serve static files from React app
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}  
+
 // Routes
 app.get('/', (req, res) => {
   res.send('API is running...');
 });
+
+
 
 app.get('/api/teams', async (req, res) => {
     try {
