@@ -16,7 +16,7 @@
     "react-router-dom": "^7.0.1"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node football-league-backend/server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server.js",
     "client": "cd staywok3-football-league && npm start",
