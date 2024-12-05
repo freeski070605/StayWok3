@@ -1,0 +1,202 @@
+/* General Theme Colors */
+:root {
+  --primary-color: #ff6600; /* Orange */
+  --secondary-color: #000000; /* Black */
+  --text-color-light: #ffffff; /* White for text on dark backgrounds */
+  --text-color-dark: #333333; /* Dark gray for text on light backgrounds */
+}
+
+/* Body and General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  margin: 0;
+  padding: 0;
+}
+
+/* App Specific */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--text-color-light);
+}
+
+.App-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.App-link:hover {
+  text-decoration: underline;
+}
+
+/* Button Overrides */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-color-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--text-color-light);
+}
+
+.btn-secondary:hover {
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.navbar {
+  background-color: #333; /* Dark background */
+}
+
+.text-orange {
+  color: var(--primary-color) !important; /* Orange text color */
+}
+
+.text-orange:hover {
+  color: #FF4500 !important; /* Darker orange on hover */
+}
+
+.btn-outline-orange {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-outline-orange:hover {
+  background-color: var(--primary-color);
+  color: #333;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  color: var(--primary-color);
+}
+
+.navbar .nav-link {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  color: var(--primary-color);
+}
+
+.navbar .nav-link:hover {
+  color: #fffefe; /* Darker orange on hover */
+}
+
+
+
+/* Styling for Team Info */
+.team-info h5 {
+  color: var(--primary-color); /* Orange color */
+  font-size: 1.25rem; /* Slightly larger font for better visibility */
+  font-weight: bold;
+}
+
+.team-info p {
+  color: var(--text-color-light); /* White color for the record */
+  font-size: 0.9rem; /* Slightly smaller font for secondary info */
+  margin: 0;
+}
+
+/* Align team information in center */
+.team-info {
+  text-align: center;
+}
+
+/* Style for "vs" label */
+.vs-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color); /* Orange color */
+}
+
+/* General game details styling */
+.game-details {
+  color: var(--text-color-light);
+  margin-top: 10px;
+}
+
+.game-details p {
+  margin-bottom: 5px;
+}
+
+.game-details {
+  margin-top: 15px;
+}
+
+.text-muted {
+  color: #aaa !important;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  min-height: 80vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+}
+
+.hero-section .btn-primary {
+  background-color: #ff6600;
+  border: none;
+}
+
+.hero-section .btn-primary:hover {
+  background-color: #e65c00;
+}
+
+.hero-section .btn-outline-light {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  padding: 20px 0;
+  text-align: center;
+}
