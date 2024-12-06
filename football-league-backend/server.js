@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const https = require('https');
-
 const dotenv = require('dotenv');
 const cors = require('cors');
 const User = require('./models/User');
@@ -106,4 +105,4 @@ app.use('/api/stats', statsRoutes); // Fixed route
 
 // Start the server
 const PORT = process.env.PORT || 5000;
-https.createServer(options, app).listen(PORT, () => console.log(`Server running on port ${PORT}`));
+https.createServer(app).listen(PORT, () => console.log(`Server running on port ${PORT}`));
