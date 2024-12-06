@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const https = require('https');
-
+const fs = require('fs');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const User = require('./models/User');
@@ -24,6 +24,14 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem'),
+};
+
+
+
 
 // Connect to MongoDB
 mongoose
@@ -106,4 +114,4 @@ app.use('/api/stats', statsRoutes); // Fixed route
 
 // Start the server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+https.createServer(options,app).listen(PORT, () => console.log(`Server running on port ${PORT}`));
