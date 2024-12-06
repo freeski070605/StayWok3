@@ -1,11 +1,9 @@
 {
-  "name": "staywok3rt",
+  "name": "football-league-app",
   "version": "1.0.0",
   "private": true,
-  "main": "server.js",
   "dependencies": {
     "axios": "^1.7.8",
-    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -15,20 +13,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.0.1"
-  },
-  "scripts": {
-    "start": "cd football-league-backend && node server.js",
-    "dev": "concurrently \"npm run server\" \"npm run start\"",
-    "server": "nodemon server.js",
-    "client": "cd staywok3-football-league && npm start",
-    "build": "cd staywok3-football-league && npm run start",
-    "heroku-postbuild": "cd staywok3-football-league && npm install && npm run start"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.0",
-    "nodemon": "^3.0.1"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  }
+  } 
+  
 }

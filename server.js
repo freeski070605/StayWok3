@@ -103,6 +103,6 @@ app.use('/api/stats', statsRoutes); // Fixed route
 
 
 // Start the server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0'; // Allow connections from any IP
 app.listen(PORT, HOST, () => console.log(`Server running on ${HOST}:${PORT}`));

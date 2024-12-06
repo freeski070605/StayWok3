@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const path = require('path');
+
+const dotenv = require('dotenv');
 const cors = require('cors');
 const User = require('./models/User');
 const Team = require('./models/Team');
@@ -15,8 +16,9 @@ const gameRoutes = require('./routes/gameRoutes');
 const standingsRoutes = require('./routes/standingsRoutes');
 const statsRoutes = require('./routes/stats');
 
-require('dotenv').config(); 
+dotenv.config();
 const app = express();
+
 
 // Middleware
 app.use(cors());
@@ -24,25 +26,14 @@ app.use(express.json());
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb+srv://Free:drew@staywok.mhqbt.mongodb.net/", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error(err));
-
-// Serve static files from React app
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}  
 
 // Routes
 app.get('/', (req, res) => {
   res.send('API is running...');
 });
-
-
 
 app.get('/api/teams', async (req, res) => {
     try {
@@ -114,5 +105,4 @@ app.use('/api/stats', statsRoutes); // Fixed route
 
 // Start the server
 const PORT = process.env.PORT || 5000;
-const HOST = '0.0.0.0'; // Allow connections from any IP
-app.listen(PORT, HOST, () => console.log(`Server running on ${HOST}:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
