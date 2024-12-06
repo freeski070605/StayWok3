@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://44.211.63.151:5000/api' || 'http://localhost:5000/api',
+  baseURL: 'https://44.211.63.151:5000/api' || 'http://localhost:5000/api',
 });
 
 // Add token to Authorization header
