@@ -114,4 +114,4 @@ app.use('/api/stats', statsRoutes); // Fixed route
 
 // Start the server
 const PORT = process.env.PORT || 5000;
-https.createServer(options,app).listen(PORT, () => console.log(`Server running on port ${PORT}`));
+https.createServer(options, app).listen(PORT, () => console.log(`Server running on port ${PORT}`));
