@@ -112,18 +112,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-dark text-white py-4">
-        <div className="container text-center">
-          <p>&copy; 2024 Football League. All rights reserved.</p>
-          <Link to="/about" className="text-white me-3">
-            About
-          </Link>
-          <Link to="/contact" className="text-white">
-            Contact
-          </Link>
-        </div>
-      </footer>
+      
     </div>
   );
 }

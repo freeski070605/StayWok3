@@ -20,6 +20,7 @@ import UpdateGameResults from './components/UpdateGameResults';
 import GameResults from './pages/GameResults';
 import Standings from './pages/Standings';
 import Stats from './pages/Stats';
+import Footer from './components/Footer';
 
 
 import './App.css';
@@ -63,11 +64,11 @@ function App() {
         <Route path="/stats" element={<Stats />} />
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard user={user} /></ProtectedRoute>} />
         <Route path="/create-team" element={<ProtectedRoute><CreateTeam /></ProtectedRoute>} />
-
         <Route path="/profile" element={<ProtectedRoute><Profile user={user} /></ProtectedRoute>} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register />} />
       </Routes>
+      <Footer />
     </Router>
     </AuthProvider>
   );
