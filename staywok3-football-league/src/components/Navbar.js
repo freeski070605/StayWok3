@@ -121,7 +121,7 @@ function Navbar() {
               <>
                 <li className="nav-item">
                   <Link
-                    className="nav-link text-warning"
+                    className="nav-link"
                     to="/register"
                     onClick={() => setIsExpanded(false)}
                   >
@@ -130,7 +130,7 @@ function Navbar() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="nav-link text-warning"
+                    className="nav-link"
                     to="/login"
                     onClick={() => setIsExpanded(false)}
                   >
